@@ -1,0 +1,5 @@
+配置好所有的GIT之后，上传步骤：
+1、git status   ---先查看需要上传的文件
+2、git add .    ---把文件加入到本地仓库，通配符为*
+3、git commit -m "info"  ---注释信息
+4、git push -u origin master  ---推送本地仓库所有更改到master分支 
