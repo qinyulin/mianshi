@@ -3,7 +3,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			html,body{width: 100%;}
+			.wrap1,.wrap2{width: 100%;height: 300px;border: 1px solid #333;margin-bottom: 20px;}
+			.left1{width: 200px;height: 60%;background-color: red;opacity: 1;float: left;}
+			.right1{width: 100%;height: 100%;background-color: blue;margin-left: 200px;}
+			
+			.left2{width: 200px;height: 300px;background-color: red;opacity: 1;float: right;}
+			.right2{height: 300px;background-color: blue;float: left;opacity: 0.5;}
+			.wrap2{height: auto;}
+			.wrap2:after{
+				content: "123";
+				display: block;
+				clear: both;
+				height: 0;
+			}
+		</style>
 	</head>
 	<body>
+		<!--左边固定宽度并且左浮动，右边的margin-left为左边DIV的宽度就可以自适应了-->
+		<div class="wrap1">
+			<div class="left1"></div>
+			<div class="right1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ab autem ratione dolorum sapiente rem est delectus ipsum rerum architecto vero modi enim eaque culpa quisquam sequi eos tempora. Ut.</div>
+		</div>
+		
+		
+		<div class="wrap2">
+			
+			<div class="right2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ab autem ratione dolorum sapiente rem est delectus ipsum rerum architecto vero modi enim eaque culpa quisquam sequi eos tempora. Ut.</div>
+			<div class="left2"></div>
+		</div>
+		<div class="wrap1"></div>
 	</body>
 </html>

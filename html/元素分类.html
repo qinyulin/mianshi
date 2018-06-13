@@ -5,5 +5,26 @@
 		<title></title>
 	</head>
 	<body>
+		<!--行内元素display:inline-->
+		span a br b string img i em del u input textarea select sup sub
+		行内元素最常使用的就是span,行内大多为描述性标记，其他的只在特定功能下使用，修饰字体<b>和<i>标签，还有<sub>和<sup>这两个标签可以直接做出平方的效果，而不需要类似移动属性的帮助，很实用。
+		行内元素特征：(1)设置宽高无效
+　　　　　　　　　	 (2)对margin仅设置左右方向有效，上下无效；padding设置上下左右都有效，即会撑大空间
+　　　　　　　　　        (3)不会自动进行换行
+		
+		
+		<!--块状元素display:block-->
+		块状元素代表性的就是div，其他如h1-h6、hr、p、nav、aside、header、footer、section、article、ul-li、table、form、address等等，都可以用div来实现。不过为了可以方便程序员解读代码，一般都会使用特定的语义化标签，使得代码可读性强，且便于查错。
+	　　块状元素特征：(1)能够识别宽高
+	　　　　　　　　　(2)margin和padding的上下左右均对其有效
+	　　　　　　　　　(3)可以自动换行
+	　　　　　　　　　(4)多个块状元素标签写在一起，默认排列方式为从上至下
+	
+	
+		<!--行内块状元素display:inline-block-->
+		行内块状元素综合了行内元素和块状元素的特性，但是各有取舍。因此行内块状元素在日常的使用中，由于其特性，使用的次数也比较多。
+	　　行内块状元素特征：(1)不自动换行
+	　　　　　　　　　　　(2)能够识别宽高
+	　　　　　　　　　　　(3)默认排列方式为从左到右
 	</body>
 </html>
