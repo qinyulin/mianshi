@@ -2,3 +2,4 @@ js数据类型：
 基础数据类型：string number boolean undefined null
 引用类型：array object
 test
+`12334
