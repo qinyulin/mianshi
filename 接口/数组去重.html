@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//常规写法，两套for循环判断，就是在每个数组循环里面去判断输出数组里面是否有子元素。
+			function distinctArr(arr){
+				let result = Object.prototype.toString.call(arr);
+				let outArr = [];
+				if(result == "[object Array]"){
+					let lenIn = arr.length;
+					for(let i = 0;i<lenIn;i++){
+						let lenOut = outArr.length;
+						let inside = false;
+						for(let j = 0;j<lenOut;j++){
+							if(arr[i] == outArr[j]){
+								inside = true;
+								break;
+							}
+						}
+						if(inside == false){
+							outArr.push(arr[i]);
+						}
+					}
+					return outArr;
+				}
+				else{
+					return outArr;
+				}
+			}
+			
+		</script>
+	</body>
+</html>
