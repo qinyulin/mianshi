@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--1、2、3种方式都是通过前后台修改来整的，还可以再继续探索。-->
+		<!--服务器代码：
+		<?php
+			echo 'callbackfunction({"name":"qin"})'
+		?>-->
+		<!--1、通过script静态标签方式
+		<script type="text/javascript">
+			function callbackfunction(data){
+				console.log(data)
+			}
+		</script>
+		<script type="text/javascript" src="http://localhost/shuju/data.php?callback=callbackfunction">
+		</script>-->
+		
+		<!--2、动态的加入script标签，让html解析的时候，动态的加载script脚本，并请求远端数据
+		<script type="text/javascript">
+			function callbackfunction(data){
+				console.log(data)
+			}
+			var script = document.createElement("script");
+			var body = document.getElementsByTagName("body");
+			script.src = "http://localhost/shuju/data.php?callback=callbackfunction";
+			body[0].appendChild(script);
+		</script>-->
+		
+		<!--3、用jquery封装的ajax请求jsonp方式
+		<script src="jquery.js"></script>
+		<script type="text/javascript">
+			$.ajax({
+				async: false,
+			    type: "GET",
+			    dataType: 'jsonp',
+			    jsonp: 'callback',
+			    jsonpCallback: 'callbackfunction',
+			    url: "http://localhost/shuju/data.php",
+			    data: "",
+			    timeout: 3000,
+			    contentType: "application/json;utf-8",
+			    success: function(msg) {
+			      console.log(msg);
+			    }
+			});
+		</script>-->
+	</body>
+</html>

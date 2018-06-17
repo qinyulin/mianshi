@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			1、Array.from():将类数组和可遍历对象转为数组.
+			2 Array.of():将一组值转换为数组
+				Array.of(3,11,8)  //[3,11,8]
+				Array.of(3)   //[3]    
+				Array.of(3).length  //1
+			3 copyWithin()
+				Array.prototype.copyWithin(target,start=0,end=this.lenght)
+				[1,2,3,4,5].copyWithin(0,3)  --> [4,5,3,4,5]
+				上面的代码表示,将从3号位置直到数组结束的成员(4和5)复制到从0号位置开始的位置,结果覆盖了原来的1和2
+			4 find()和findIndex()
+			  find用于找出第一个符合条件的数组成员
+			  findIndex返回第一个符合条件的数组成员的位置
+			5 fill()
+			  ['a','b','c'].fill(7)  //[7,7,7]
+			  ['a','b','c'].fill(7,1,2)  //['a',7,'c']
+			6 entries()  keys() values()
+			7 includes()
+			   检查参数是否包含再数组里面,有就返回true.
+		</script>
+	</body>
+</html>
