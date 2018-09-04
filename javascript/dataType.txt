@@ -1,3 +1,19 @@
 js数据类型：
+数值（number）：整数和小数（比如1和3.14）
+字符串（string）："abc"
+布尔值（boolean）：表示真伪的两个特殊值，即true（真）和false（假）
+undefined：表示“未定义”或不存在，即由于目前没有定义，所以此处暂时没有任何值
+null：表示空值，即此处的值为空
+对象（object）：各种值组成的集合
+ES6 新增 Symbol类型：全局唯一的值（类似加密货币）
+
 基础数据类型：string number boolean undefined null
 引用类型：array object
+
+通常，数值、字符串、布尔值这三种类型---基本数据类型
+undefined && null 称为两个特殊值
+对象是复杂的数据类型，可以分为三个子类型：
+狭义的对象（object);数组（array);函数（function）
+
+https://juejin.im/post/5afc211e6fb9a07abf72b414
+上面这个链接不错，看到这里的时候可以看一下。
